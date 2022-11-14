@@ -1,3 +1,4 @@
+// Topbar Component
 $('.component-searchbar .search input').focus(() => {
   $('.component-searchbar .search').addClass('active');
 })
@@ -11,5 +12,9 @@ $('.component-searchbar .search form').submit(function (e) {
     window.location.href = `/?s=${searchValue}`
   }
   searchQuery()
+})
 
+// Menubar Component
+$('.component-menubar .menu-mobile-toggle').on('click', function () {
+  $('.component-menubar .menu-container').toggleClass('open')
 })
