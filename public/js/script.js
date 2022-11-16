@@ -57,5 +57,11 @@ $(document).ready(function () {
       },
     ]
   })
+  
+  
+
+  $('.line-clamp-2').each((i, val) => {
+    $clamp(val, {clamp: 2, animate: true})
+  });
 
 })

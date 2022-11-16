@@ -491,19 +491,18 @@ body {
       box-sizing: border-box;
       justify-content: space-between;
       .title {
+        align-content: flex-start;
         h3 {
           color: $blue;
           font-size: 16px;
           font-weight: 600;
           line-height: 1.3em;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          // display: -webkit-box;
+          // -webkit-line-clamp: 2;
+          // -webkit-box-orient: vertical;
         }
-        align-content: flex-start;
-
       }
       .meta {
         margin: 0;
@@ -521,6 +520,7 @@ body {
           line-height: 19px;
           padding: 0 6px;
           border-radius: 2px;
+          
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
