@@ -59,9 +59,28 @@ $(document).ready(function () {
   })
   
   
-
-  $('.line-clamp-2').each((i, val) => {
-    $clamp(val, {clamp: 2, animate: true})
+  $('.line-clamp-1').each((i, val) => {
+    $clamp(val, {clamp: 1 })
   });
 
+  $('.line-clamp-2').each((i, val) => {
+    $clamp(val, {clamp: 2 })
+  });
+
+  // Accordion Animation Relative Height
+  $('.league-group').each((i, val) => {
+    $('.league-name .text', val).on('click', function () {
+      $(val).toggleClass('close')
+    })
+  })
+
+
 })
+// Score fade in animation
+var status1 = document.querySelector('.component-sidebar-scoreboard .item')
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => { 
+    console.log(entry.classList)
+  })
+}, { threshold: [1] })
+observer.observe(status1)
