@@ -28,6 +28,10 @@ body {
   box-sizing: border-box;
 }
 
+footer {
+  padding-bottom: 200px;
+}
+
 // 💿💿💿💿💿💿💿
 .component-searchbar {
   background-color: $whtie;
@@ -550,9 +554,13 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;
+    padding-left: 0;
+    padding-right: 0;
     @media screen and (min-width: 768px) { 
       grid-template-columns: 1fr 300px;
       grid-gap: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
     @media screen and (min-width: 992px) { 
       grid-template-columns: 1fr 300px;
@@ -562,8 +570,90 @@ body {
       grid-template-columns: 1fr 373px;
       grid-gap: 32px;
     }
+
+    .main {
+      padding-left: 16px;
+      padding-right: 16px;
+      @media screen and (min-width: 768px) { 
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }
+
+
+
+
+
+.more-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s all;
+  @media screen and (min-width: 768px) {
+    max-height: 1000px !important;
+  }
+  &.open {
+    max-height: 1000px;
+  }
+}
+
+.show-more {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto;
+  .button {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-gap: 8px;
+    align-items: center;
+    .text {
+      font-weight: 500;
+      color: #005091;
+      font-size: 10px;
+      .expand {
+        display: block;
+      }
+      .collapse {
+        display: none;
+      }
+    }
+    .image {
+      img {
+        height: 24px;
+        display: block;
+        transition: all 0.3s;
+      }
+    }
+    &.hide {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    &.open {
+      img {
+        transform: rotate(180deg);
+      }
+      .text {
+        .expand {
+          display: none;
+        }
+        .collapse {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
 
 .component-sidebar-scoreboard {
   margin-top: 32px;
@@ -655,11 +745,7 @@ body {
       }
     }
     .score-list {
-      .spacing {
-        display: block;
-        width: 100%;
-        height: 23px;
-      }
+
       .item {
         display: grid;
         grid-template-columns: 1fr 100px;
@@ -682,6 +768,9 @@ body {
             left: 0;
             right: 0;
           }
+        }
+        &:hover {
+          background-color: rgba($color: $yellow, $alpha: 0.1);
         }
 
         @keyframes up {
@@ -782,3 +871,169 @@ body {
     }
   }
 }
+
+.component-sidebar-broadcast,
+.component-broadcast {
+  margin-top: 32px;
+  @media screen and (min-width: 768px) { 
+    margin-top: 48px;
+  }
+  background-color: $whtie;
+  border-radius: 4px;
+  .header {
+    padding: 16px 16px 8px 16px;
+    font-weight: 600;
+    color: $black;
+    font-size: 16px;
+  }
+  .carousel-header {
+    padding: 8px 16px 16px 16px;
+    border-bottom: 1px solid #E5E5E5;
+    display: grid;
+    grid-template-columns: 24px 1fr 24px;
+    align-items: center;
+    overflow-y: hidden;
+    .slick-arrow {
+        width: 100%;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.5s opacity;
+        &:hover {
+          opacity: 1;
+        }
+    }
+    .nav {
+      div {
+        font-size: 10px;
+        font-weight: 700;
+        color: #999999;
+        padding: 10px 0px;
+        border: 1px solid #E5E5E5;
+        border-radius: 2px;
+        text-align: center;
+        margin-right: 8px;
+        cursor: pointer;
+        transition: 0.5s all;
+      }
+    }
+    .active {
+      div {
+        background-color: #093051;
+        color: $whtie;
+        border: none;
+        border: 1px solid #093051;
+      }
+    }
+  }
+
+  .broadcast {
+    .league-group {
+      padding-bottom: 8px;
+      .header {
+        padding: 16px 16px 4px 16px;
+        font-size: 12px;
+        color: $black;
+        font-weight: 600;
+      }
+      .line {
+        margin-bottom: 2px;
+        border-radius: 4px;
+        background-color: #F9F9F9;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 12px;
+        
+        display: grid;
+        grid-template-columns: 1fr 38px 1fr;
+        align-items: center;
+        .middle {
+          text-align: center;
+          font-size: 12px;
+          font-weight: 600;
+          .show-result {
+            display: none;
+            align-items: center;
+            grid-template-columns: 1fr 6px 1fr;
+            .left {
+              color: $black;
+              text-align: right;
+            }
+            .mid {
+              color: #999999;
+            }
+            .right {
+              color: $black;
+              text-align: left;
+            }
+          }
+          .show-vs {
+            display: none;
+            color: #999999;
+          }
+        }
+        .logo {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+        .name {
+          font-size: 10px;
+          font-weight: 600;
+          line-height: 1.2em;
+        }
+        .meta {
+          font-size: 10px;
+          font-weight: 700;
+          color: #999999;
+        }
+        .play-btn {
+          width: 20px;
+          height: 20px;
+          background-image: url('/images/broadcast/play-btn.png');
+          background-size: 100%;
+          background-position: center center;
+          background-color: $yellow;
+          border-radius: 2px;
+          transition: all 0.2s;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        .team-left {
+          display: grid;
+          grid-template-columns: auto 1fr 24px;
+          align-items: center;
+          grid-gap: 4px;
+          .name {
+            text-align: right;
+          }
+        }
+        .team-right {
+          display: grid;
+          grid-template-columns: 24px 1fr auto;
+          align-items: center;
+          grid-gap: 4px;
+        }
+
+        &:hover {
+          background-color: rgba($color: $yellow, $alpha: 0.1);
+        }
+
+        &.result {
+          .show-result {
+            display: grid;
+          }
+        }
+
+        &.upcoming {
+          .show-vs {
+            display: grid;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -72,15 +72,46 @@ $(document).ready(function () {
     $('.league-name .text', val).on('click', function () {
       $(val).toggleClass('close')
     })
+    
+    var moreItem = $('.more-list .item', val).length
+    if (moreItem > 0) {
+      $('.show-more .button',val).removeClass('hide')
+    }
+
+    $('.show-more .button', val).on('click', function () {
+      $('.more-list', val).toggleClass('open')
+      $('.show-more .button', val).toggleClass('open')
+    })
+
+  })
+
+  // Accordion Animation Relative Height
+  $('.broadcast').each((i, val) => {
+    
+    var moreItem = $('.more-list .item', val).length
+    if (moreItem > 0) {
+      $('.show-more .button', val).removeClass('hide')
+    }
+
+    $('.show-more .button', val).on('click', function () {
+      $('.more-list', val).toggleClass('open')
+      $('.show-more .button', val).toggleClass('open')
+    })
+
+  })
+
+
+  // broadcast time
+  $('.broadcast-carousel-container .carousel-header').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: `<img src="/images/slick/slick-next.png" class="next" alt="Next" />`,
+    prevArrow: `<img src="/images/slick/slick-prev.png" class="prev" alt="Next" />`,
+  });
+  $('.broadcast-carousel-container .carousel-header .nav').on('click', function () {
+    $('.broadcast-carousel-container .carousel-header .nav').removeClass('active');
+    $(this).addClass('active');
   })
 
 
 })
-// Score fade in animation
-var status1 = document.querySelector('.component-sidebar-scoreboard .item')
-const observer = new IntersectionObserver(function (entries) {
-  entries.forEach((entry) => { 
-    console.log(entry.classList)
-  })
-}, { threshold: [1] })
-observer.observe(status1)
