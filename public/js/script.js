@@ -112,6 +112,40 @@ $(document).ready(function () {
     $('.broadcast-carousel-container .carousel-header .nav').removeClass('active');
     $(this).addClass('active');
   })
-
-
 })
+
+// Calculate Match Analyze bar chart animation
+var guruComponent = document.getElementsByClassName('component-guru-analyze-item') || undefined;
+function calculatePercent(correctNum, incorrectNum) {
+  var correctPercent = Math.floor((correctNum * 100) / (correctNum + incorrectNum));
+  var incorrectPercent = Math.ceil(100 - correctPercent);
+  return { correctPercent, incorrectPercent }
+}
+
+const observer = new IntersectionObserver(function (entry) {
+  if (entry[0].isIntersecting) {
+    var i = entry[0].target;
+    i.classList.remove('off')
+  }
+}, { threshold: [1] })
+
+if (guruComponent != undefined) {
+  document.querySelectorAll('.component-guru-analyze-item .summary-group').forEach((group) => {
+    group.querySelectorAll('.item').forEach((item) => {
+      var guruCorrect = parseInt(item.querySelector('.number-group .correct .text span').innerText)
+      var guruInCorrect = parseInt(item.querySelector('.number-group .incorrect .text span').innerText)
+      var { correctPercent, incorrectPercent } = calculatePercent(guruCorrect, guruInCorrect)
+      item.querySelector('.number-group .correct .line').style.width = correctPercent + '%';
+      item.querySelector('.number-group .incorrect .line').style.width = incorrectPercent + '%';
+    })
+  })
+}
+var guruItemNo = 0;
+document.querySelectorAll('.component-guru-analyze-item').forEach((itemEntry) => {
+  itemEntry.classList.add('item-'+ ++guruItemNo)
+  if (guruItemNo == 4) {
+    guruItemNo = 0
+  }
+  observer.observe(itemEntry);
+})
+
