@@ -586,7 +586,6 @@ footer {
   }
 }
 
-
 // 🥹🥹🥹🥹🥹🥹🥹🥹
 .component-video-carousel {
   margin-top: 32px;
@@ -784,6 +783,10 @@ footer {
 
 // 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻
 .main-sidebar-layout {
+  margin-top: 32px;
+  @media screen and (min-width: 768px) { 
+    margin-top: 48px;
+  }
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1303,9 +1306,9 @@ footer {
 }
 
 section {
-  margin-top: 32px;
+  margin-bottom: 32px;
   @media screen and (min-width: 768px) { 
-    margin-top: 48px;
+    margin-bottom: 48px;
   }
   .date-name {
     margin-bottom: 16px;
@@ -1769,5 +1772,23 @@ section {
         width: 40px;
       }
     } 
+  }
+}
+
+.component-page-header {
+  margin-top: 32px;
+  @media screen and (min-width: 768px) { 
+    margin-top: 48px;
+  }
+  h1 {
+    color: $black;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .sub-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6em;
   }
 }
