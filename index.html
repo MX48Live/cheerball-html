@@ -57,13 +57,13 @@
         </div>
         <div class="menu-container">
           <ul>
-            <li class="active"><a href="#">หน้าแรก</a></li>
-            <li><a href="#">Bet News</a></li>
-            <li><a href="#">ตารางคะแนน</a></li>
-            <li><a href="#">วิเคราะห์บอล</a></li>
-            <li><a href="#">ทีเด็ดบอล</a></li>
-            <li><a href="#">ผลบอล</a></li>
-            <li><a href="#">ไฮไลท์ฟุตบอล</a></li>
+            <li class="active"><a href="./index.html">หน้าแรก</a></li>
+            <li><a href="./bet-news.html" target="_self">Bet News</a></li>
+            <li><a href="./score-board.html" target="_self">ตารางคะแนน</a></li>
+            <li><a href="./matches-analyze.html" target="_self">วิเคราะห์บอล</a></li>
+            <li><a href="./guru-prediction.html" target="_self">ทีเด็ดบอล</a></li>
+            <li><a href="./matches-result.html" target="_self">ผลบอล</a></li>
+            <li><a href="./hilight-video.html" target="_self">ไฮไลท์ฟุตบอล</a></li>
           </ul>
         </div>
       </div>
@@ -184,7 +184,21 @@
     </div>
   </div>
 
-    <div class="component-video-carousel">
+  <div class="component-video-carousel">
+    <div class="container">
+      <div class="component-header-readmore">
+        <div class="h2-group">
+          <h2 class="line-clamp-1">Motor Sport</h2>
+        </div>
+        <a href="#" class="more">ดูเพิ่มเติม</a>
+      </div>
+      <!-- video-carousel-container -->
+      <div class="dev-section">Slick ใช้ <span>component-video-carousel</span> (เหมือน Hilight Football)</div>
+      <!-- video-carousel-container -->
+    </div>
+  </div>
+
+  <div class="component-video-carousel">
     <div class="container">
       <div class="component-header-readmore with-logo">
         <div class="h2-group">
@@ -194,6 +208,7 @@
         <a href="#" class="more">ดูเพิ่มเติม</a>
       </div>
       <!-- video-carousel-container -->
+      <div class="dev-section"> Header ใช้ <span>component-header-readmore</span> อันนี้ที่มี Logo จะมี <span>.with-logo</span></div>
       <!-- video-carousel-container -->
     </div>
   </div>
@@ -298,7 +313,9 @@
             <a href="#" class="more">ดูเพิ่มเติม</a>
           </div>
           <div class="date-name">ทรรศนะเซียน <span>ประจำวันที่ 20 มีนาคม 2565</span></div>
-          
+
+          <div class="dev-section">อันนี้คำนวนขนาดของกราฟ จะดึงข้อมูลจาก <span>.summary-group .number-group .text span</span> มาคำนวน</div>
+
           <div class="component-guru-analyze-item off">
             <div class="guru-name">
               <div class="background">
@@ -626,6 +643,86 @@
             <h2 class="line-clamp-1">Special Moment</h2>
             <a href="#" class="more">ดูเพิ่มเติม</a>
           </div>
+          <div class="dev-section">ตั้งแต่ส่วนนี้เป็นต้นไป ยาวไปถึงข้างล่าง ใช้ component <span>.component-article-item</span> ทั้งหมด ส่วนที่เป็น Feature จะเพิ่ม <span>.feature</span> สำหรับที่เป็นแบบวิดีโอจะเพิ่ม <span>.video</span> (มีแต่ section นี้แหละที่เป็นแบบ Video)</div>
+          <div class="feature-list-layout">
+
+            <div class="feature-layout">
+              <div class="component-article-item video feature">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div> 
+            </div><!-- feature-layout -->
+            
+            <div class="list-layout">
+              <div class="component-article-item video">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item video">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item video">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div><!-- list-layout -->
+
+          </div><!-- feature-list-layout -->
         </section>
 
         <section>
@@ -633,303 +730,719 @@
             <h2 class="line-clamp-1">หยิบมาเล่า</h2>
             <a href="#" class="more">ดูเพิ่มเติม</a>
           </div>
+
+          <div class="feature-list-layout">
+
+            <div class="feature-layout">
+              <div class="component-article-item feature">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div> 
+            </div><!-- feature-layout -->
+            
+            <div class="list-layout">
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">BALL THAI LEGEND : เทิดศักดิ์ ใจมั่น </div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เงินนำหน้าคุณค่าว่าทีหลัง</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">'กึ๋น' ของโพลกิ้ง</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div><!-- list-layout -->
+
+          </div><!-- feature-list-layout -->
+
         </section>
 
-      </div>
+        <section>
+          <div class="component-header-readmore">
+            <h2 class="line-clamp-1">คอลัมนิตส์</h2>
+            <a href="#" class="more">ดูเพิ่มเติม</a>
+          </div>
+          <div class="dev-section">Section นี้  ในส่วนของ <span>.meta</span> เปลี่ยนจาก <span>.date-time</span> เป็น <span>.guru-name</span></div>
+          <div class="feature-list-layout">
+
+            <div class="feature-layout">
+              <div class="component-article-item feature">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เซียนเชื่อโอบามีสกอร์เกมกลาซิโก้</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="guru-name">
+                        <div class="image" style="background-image: url('./images/placeholder/guru-placeholder.png');"></div>
+                        <div class="name">อาเล่แมน</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div> 
+            </div><!-- feature-layout -->
+            
+            <div class="list-layout">
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เซียนเชื่อโอบามีสกอร์เกมกลาซิโก้ </div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="guru-name">
+                        <div class="image" style="background-image: url('./images/placeholder/guru-placeholder.png');"></div>
+                        <div class="name">อาเล่แมน</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เซียนเชื่อโอบามีสกอร์เกมกลาซิโก้ </div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="guru-name">
+                        <div class="image" style="background-image: url('./images/placeholder/guru-placeholder.png');"></div>
+                        <div class="name">อาเล่แมน</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เซียนเชื่อโอบามีสกอร์เกมกลาซิโก้ </div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="guru-name">
+                        <div class="image" style="background-image: url('./images/placeholder/guru-placeholder.png');"></div>
+                        <div class="name">อาเล่แมน</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div><!-- list-layout -->
+
+          </div><!-- feature-list-layout -->
+
+        </section>
+
+        <section>
+          <div class="component-header-readmore">
+            <h2 class="line-clamp-1">Bet News</h2>
+            <a href="#" class="more">ดูเพิ่มเติม</a>
+          </div>
+
+          <div class="feature-list-layout">
+
+            <div class="feature-layout">
+              <div class="component-article-item feature">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div> 
+            </div><!-- feature-layout -->
+            
+            <div class="list-layout">
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">BALL THAI LEGEND : เทิดศักดิ์ ใจมั่น </div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">เงินนำหน้าคุณค่าว่าทีหลัง</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="component-article-item">
+                <a href="#" target="_self">
+                  <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                    <img src="./images/slick/play-btn.png" alt="Play">
+                  </div>
+                  <div class="details">
+                    <div class="title-group">
+                      <div class="title line-clamp-2">'กึ๋น' ของโพลกิ้ง</div>
+                      <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                    </div>
+                    <div class="meta">
+                      <div class="tag line-clamp-1">Special Moment</div>
+                      <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div><!-- list-layout -->
+
+          </div><!-- feature-list-layout -->
+
+        </section>
+
+      </div><!-- main -->
       <div class="sidebar">
+
+        <!-- Latest Video -->
+        <section>
+          <div class="component-header-readmore">
+            <h2 class="line-clamp-1">Latest Video</h2>
+          </div>
+          <div class="component-article-item video feature">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+        </section>
+        <!-- Latest Video -->
+
+         <!-- Highlight Football -->
+        <section>
+          <div class="component-header-readmore">
+            <h2 class="line-clamp-1">Highlight Football</h2>
+            <a href="#" class="more">ดูเพิ่มเติม</a>
+          </div>
+          <div class="component-article-item video">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="component-article-item video">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="component-article-item video">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+        </section>
+        <!-- Highlight Football -->
+
+         <!-- BET News -->
+        <section>
+          <div class="component-header-readmore">
+            <h2 class="line-clamp-1">BET News</h2>
+            <a href="#" class="more">ดูเพิ่มเติม</a>
+          </div>
+          <div class="component-article-item">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="component-article-item">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="component-article-item">
+            <a href="#" target="_self">
+              <div class="image" style="background-image: url('./images/placeholder/video-slick.png');">
+                <img src="./images/slick/play-btn.png" alt="Play">
+              </div>
+              <div class="details">
+                <div class="title-group">
+                  <div class="title line-clamp-2">ไฮไลท์ฟุตบอลลาลีกา เรอัล มาดริด VS บาร์เซโลน่า</div>
+                  <div class="desc line-clamp-2">สกาย เบท ร้านพูลชั้นนำของเมืองผู้ดี ปรับราคาอีกครั้งในเคสที่ ลิเวอร์พูล จะเข้าวินเป็น 4 แชมป์ในฤดูกาลนี้</div>
+                </div>
+                <div class="meta">
+                  <div class="tag line-clamp-1">Special Moment</div>
+                  <div class="date-time line-clamp-1">9 Mar 2022, 22:46</div>
+                </div>
+              </div>
+            </a>
+          </div> 
+        </section>
+        <!-- BET News -->
+
         <!-- 😺😺😺😺😺😺😺😺 -->
-        <div class="component-sidebar-scoreboard">
-          <div class="header">ตารางคะแนน</div>
-          <div class="league-group">
+        <section class="no-padding">
+          <div class="component-sidebar-scoreboard">
+            <div class="header">ตารางคะแนน</div>
+            <div class="league-group">
 
-            <div class="league-name">
-              <div class="league-logo">
-                <img src="./images/placeholder/logo-pl.png" alt="Premier League">
-              </div>
-              <div class="text">
-                View 2021/2022 Fixtures
-              </div>
-            </div>
-            <div class="score-table">
-
-              <div class="score-head">
-                <div class="name">Team</div>
-                <div class="number">
-                  <div>Pid</div>
-                  <div>GD</div>
-                  <div>P<span>ts</span></div>
+              <div class="league-name">
+                <div class="league-logo">
+                  <img src="./images/placeholder/logo-pl.png" alt="Premier League">
+                </div>
+                <div class="text">
+                  View 2021/2022 Fixtures
                 </div>
               </div>
-              <div class="score-list">
+              <div class="score-table">
+                <div class="score-head">
+                  <div class="name">Team</div>
+                  <div class="number">
+                    <div>Pid</div>
+                    <div>GD</div>
+                    <div>P<span>ts</span></div>
+                  </div>
+                </div>
+                <div class="score-list">
 
-                <div class="top-list">
+                  <div class="top-list">
 
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">1</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester City</div>
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">1</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester City</div>
+                        </div>
+                        <div class="status up"></div>
                       </div>
-                      <div class="status up"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">2</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester City</div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
                       </div>
-                      <div class="status down "></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
+                    </div><!-- item -->
 
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">3</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">2</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester City</div>
+                        </div>
+                        <div class="status down "></div>
                       </div>
-                      <div class="status stay "></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">4</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
+                    </div><!-- item -->
 
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">5</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">3</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status stay "></div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                </div><!-- top-list -->
-
-                <div class="more-list">
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">6</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
+                    </div><!-- item -->
 
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">7</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">4</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">8</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
+                    </div><!-- item -->
 
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">9</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">5</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">10</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
                       </div>
-                      <div class="status"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
+                    </div><!-- item -->
 
-                </div><!-- more-list -->
-              
-                <div class="show-more">
-                  <div class="button hide">
-                    <div class="text"><span class="expand">แสดงทั้งหมด</span><span class="collapse">ซ่อน</span></div>
-                    <div class="image"><img src="./images/scoreboard/double-down.png" alt=""></div>
+                  </div><!-- top-list -->
+                  <div class="dev-section"> ส่วนนี้จะถูกคั่นด้วย <span>.top-list</span> กับ <span>.more-list</span> ใช้สำหรับ Mobile ส่วนที่อยู่ใน <span>.more-list</span> จะซ่อนและ toggle ได้</div>
+                  <div class="more-list">
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">6</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">7</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">8</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">9</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">10</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                  </div><!-- more-list -->
+                
+                  <div class="show-more">
+                    <div class="button hide">
+                      <div class="text"><span class="expand">แสดงทั้งหมด</span><span class="collapse">ซ่อน</span></div>
+                      <div class="image"><img src="./images/scoreboard/double-down.png" alt=""></div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div> <!-- league-group -->
+
+            <div class="league-group close">
+              <div class="league-name">
+                <div class="league-logo">
+                  <img src="./images/placeholder/logo-laliga.png" alt="LaLiga">
+                </div>
+                <div class="text">
+                  View 2021/2022 Fixtures
+                </div>
+              </div>
+              <div class="score-table">
+                <div class="score-head">
+                  <div class="name">Team</div>
+                  <div class="number">
+                    <div>Pid</div>
+                    <div>GD</div>
+                    <div>P<span>ts</span></div>
+                  </div>
+                </div>
+                <div class="score-list">
+                  <div class="top-list">
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">1</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester City</div>
+                        </div>
+                        <div class="status up"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">2</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester City</div>
+                        </div>
+                        <div class="status down"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="item">
+                      <div class="name-status">
+                        <div class="name-group">
+                          <div class="no">3</div>
+                          <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
+                          <div class="name">Manchester United</div>
+                        </div>
+                        <div class="status stay"></div>
+                      </div>
+                      <div class="number">
+                        <div>28</div>
+                        <div>50</div>
+                        <div>69</div>
+                      </div>
+                    </div><!-- item -->
+                  </div><!-- top-list -->
+                  <div class="more-list">
+                  </div>
+                  <!-- more-list -->
+
+                  <div class="show-more">
+                    <div class="button hide">
+                      <div class="text"><span class="expand">แสดงทั้งหมด</span><span class="collapse">ซ่อน</span></div>
+                      <div class="image"><img src="./images/scoreboard/double-down.png" alt=""></div>
+                    </div>
                   </div>
                 </div>
 
               </div>
+            </div> <!-- league-group -->
 
-            </div>
-          </div> <!-- league-group -->
-
-          <div class="league-group close">
-            <div class="league-name">
-              <div class="league-logo">
-                <img src="./images/placeholder/logo-laliga.png" alt="LaLiga">
-              </div>
-              <div class="text">
-                View 2021/2022 Fixtures
-              </div>
-            </div>
-            <div class="score-table">
-
-              <div class="score-head">
-                <div class="name">Team</div>
-                <div class="number">
-                  <div>Pid</div>
-                  <div>GD</div>
-                  <div>P<span>ts</span></div>
-                </div>
-              </div>
-              <div class="score-list">
-                <div class="top-list">
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">1</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester City</div>
-                      </div>
-                      <div class="status up"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">2</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester City</div>
-                      </div>
-                      <div class="status down"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-
-                  <div class="item">
-                    <div class="name-status">
-                      <div class="name-group">
-                        <div class="no">3</div>
-                        <div class="logo"><img src="./images/placeholder/m-city.png" alt="Manchester City"></div>
-                        <div class="name">Manchester United</div>
-                      </div>
-                      <div class="status stay"></div>
-                    </div>
-                    <div class="number">
-                      <div>28</div>
-                      <div>50</div>
-                      <div>69</div>
-                    </div>
-                  </div><!-- item -->
-                </div><!-- top-list -->
-
-                <div class="more-list">
-                </div>
-                <!-- more-list -->
-
-                <div class="show-more">
-                  <div class="button hide">
-                    <div class="text"><span class="expand">แสดงทั้งหมด</span><span class="collapse">ซ่อน</span></div>
-                    <div class="image"><img src="./images/scoreboard/double-down.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div> <!-- league-group -->
-
-        </div> <!-- component-sidebar-scoreboard -->
+          </div> <!-- component-sidebar-scoreboard -->
+        </section>
         <!-- 😺😺😺😺😺😺😺😺 -->
 
         <!-- 👾👾👾👾👾👾👾👾 -->
+        <section class="no-padding">
         <div class="component-sidebar-broadcast">
           <div class="header">ตารางถ่ายทอดสด</div>
           <div class="broadcast-carousel-container">
@@ -1193,10 +1706,12 @@
                 </div>
               </div>
             </div><!-- broadcast -->
+            <div class="dev-section">ใช้วิธีซ่อนใน Mobile เหมือน ตารางคะแนน (ข้างบน)</div>
           </div>
         </div>
+        </section>
         <!-- 👾👾👾👾👾👾👾👾 -->
-      </div>
+      </div><!-- sidebar -->
     </div>
   </main>
   <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
