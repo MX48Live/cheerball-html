@@ -115,7 +115,7 @@ $(document).ready(function () {
 })
 
 // Calculate Match Analyze bar chart animation
-var guruComponent = document.getElementsByClassName('component-guru-analyze-item') || undefined;
+var guruComponent = document.querySelectorAll('.component-guru-analyze-item');
 function calculatePercent(correctNum, incorrectNum) {
   var correctPercent = Math.floor((correctNum * 100) / (correctNum + incorrectNum));
   var incorrectPercent = Math.ceil(100 - correctPercent);
@@ -129,7 +129,7 @@ const observer = new IntersectionObserver(function (entry) {
   }
 }, { threshold: [1] })
 
-if (guruComponent != undefined) {
+if (guruComponent.length > 0) {
   document.querySelectorAll('.component-guru-analyze-item .summary-group').forEach((group) => {
     group.querySelectorAll('.item').forEach((item) => {
       var guruCorrect = parseInt(item.querySelector('.number-group .correct .text span').innerText)
@@ -149,3 +149,63 @@ document.querySelectorAll('.component-guru-analyze-item').forEach((itemEntry) =>
   observer.observe(itemEntry);
 })
 
+// Video Floating Handle
+var videoFloating = document.querySelectorAll('.floating-video-enable');
+var videoFloatingContainer = document.getElementsByClassName('floating-video-container')[0];
+var videoTag = videoFloatingContainer.getElementsByTagName('video')[0];
+var videoSRC = videoTag.getElementsByTagName('source')[0];
+var closeVideo = videoFloatingContainer.getElementsByClassName('close')[0];
+var videoToggle = videoFloatingContainer.getElementsByClassName('toggle')[0];
+
+closeVideo.addEventListener('click', function () {
+    destroyVideo()
+  videoFloatingContainer.classList.remove('show')
+  videoFloatingContainer.classList.add('full-page')
+ })
+videoToggle.addEventListener('click', function () {
+  if (!videoFloatingContainer.classList.contains('full-page')) {
+    videoFloatingContainer.classList.add('full-page');
+  } else if (videoFloatingContainer.classList.contains('full-page')) {
+    videoFloatingContainer.classList.remove('full-page');
+  }
+ })
+    
+console.log(closeVideo)
+function loadVideo(data) {
+  videoSRC.setAttribute('src', data)
+  videoTag.load();
+  videoTag.play();
+}
+function destroyVideo() {
+  videoTag.pause();
+  videoSRC.setAttribute('src', '')
+}
+
+if (videoFloating.length > 0) { 
+  videoFloating.forEach((item) => {
+    console.log(videoFloatingContainer)
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!videoFloatingContainer.classList.contains('show')) {
+        
+        loadVideo('./images/placeholder/video-1.mp4')
+        videoFloatingContainer.classList.add('show')
+
+      } else if (videoFloatingContainer.classList.contains('show')) {
+        destroyVideo()
+        loadVideo('./images/placeholder/video-1.mp4')
+        videoFloatingContainer.classList.add('show')
+        videoFloatingContainer.classList.add('full-page')
+      }
+    })
+  })
+
+  window.addEventListener('scroll', function () {
+    if (videoFloatingContainer.classList.contains('full-page') && videoFloatingContainer.classList.contains('show')) {
+      setTimeout(() => {
+        videoFloatingContainer.classList.remove('full-page')
+      }, 100);
+    }
+  })
+}
