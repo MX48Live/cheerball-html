@@ -107,10 +107,21 @@ footer {
     text-align: center;
     padding: 8px 0;
     background-color: #313D46;
-    img {
+    a {
       display: inline-block;
-      height: 32px;
       margin: 8px 16px;
+      img {
+        display: inline-block;
+        height: 32px;
+        opacity: 0.7;
+        transition: all 0.2s;
+      }
+      &:hover {
+        img {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
     }
   }
   .main-footer .container,
