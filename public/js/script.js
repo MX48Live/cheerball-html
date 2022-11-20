@@ -57,6 +57,23 @@ $(document).ready(function () {
       },
     ]
   })
+
+  $('.video-carousel-container-category').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: `<img src="/images/slick/slick-next.png" class="next" alt="Next" />`,
+    prevArrow: `<img src="/images/slick/slick-prev.png" class="prev" alt="Next" />`,
+    mobileFirst: true,
+    variableWidth: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  })
   
   
   $('.line-clamp-1').each((i, val) => {
@@ -189,12 +206,12 @@ if (videoFloating.length > 0) {
       e.stopPropagation();
       if (!videoFloatingContainer.classList.contains('show')) {
         
-        loadVideo('./images/placeholder/video-1.mp4')
+        loadVideo(item.dataset.video)
         videoFloatingContainer.classList.add('show')
 
       } else if (videoFloatingContainer.classList.contains('show')) {
         destroyVideo()
-        loadVideo('./images/placeholder/video-1.mp4')
+        loadVideo(item.dataset.video)
         videoFloatingContainer.classList.add('show')
         videoFloatingContainer.classList.add('full-page')
       }

@@ -415,6 +415,13 @@ footer {
   }
 }
 
+.home-carousel-section {
+  margin-top: 32px;
+  @media screen and (min-width: 768px) { 
+    margin-top: 48px;
+  }
+}
+
 // 💿💿💿💿💿💿💿
 .component-searchbar {
   background-color: $whtie;
@@ -701,11 +708,13 @@ footer {
 
 // 🥹🥹🥹🥹🥹🥹🥹🥹
 .component-video-carousel {
-  margin-top: 32px;
+  margin-bottom: 32px;
   @media screen and (min-width: 768px) { 
-    margin-top: 48px;
+    margin-bottom: 48px;
   }
-  .video-carousel-container {
+
+  .video-carousel-container,
+  .video-carousel-container-category {
     position: relative;
     margin-left: -8px;
     margin-right: -8px;
@@ -720,6 +729,17 @@ footer {
     @media screen and (min-width: 992px) {
       margin-left: -16px;
       margin-right: -16px;
+    }
+  }
+  .video-carousel-container-category {
+    display: grid;
+    column-gap: 0px;
+    row-gap: 32px;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .details {
+      min-height: 100px;
     }
   }
   .slick-arrow {
@@ -909,7 +929,7 @@ footer {
   @media screen and (min-width: 768px) { 
     margin-top: 48px;
   }
-  .container {
+  > .container {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;

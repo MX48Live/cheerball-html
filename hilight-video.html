@@ -1,203 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheerball: ไฮไลท์ฟุตบอล</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;900&family=Noto+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="./style/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="./style/reset.css">
-  <link rel="stylesheet" type="text/css" href="./style/app.scss">
-</head>
-<body>
-  <header>
-    <!-- 💿💿💿💿💿💿💿 -->
-    <div class="component-searchbar">
+  <head>
+    <title>Cheerball: ไฮไลท์ฟุตบอล</title>
+    {{> head }}
+  </head>
+  <body>
+    <header>
+      {{> component-searchbar }}
+      {{> component-menubar }}
+    </header>
+
+    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
+    <div class="component-page-header">
       <div class="container">
-        <div class="main-logo">
-          <a href="/">
-            <img src="./images/searchbar/top-logo.png" alt="Cheerball Logo" class="logo">
-          </a>
-        </div>
-        <div class="search">
-          <div class="search-group">
-            <form>
-              <input type="text" placeholder="Search">
-              <div class="underline"></div>
-              <button type="submit">ENTER</button>
-            </form>
-          </div>
-        </div>
-        <div class="social">
-          <a href="#" target="_blank">
-            <img src="./images/searchbar/top-facebook-icon.png" alt=""><span>Cheerball</span>
-          </a>
-          <a href="#" target="_blank">
-            <img src="./images/searchbar/top-line-icon.png" alt=""><span>@cheerballth</span>
-          </a>
-        </div>
+        <h1 class="line-clamp-1">ไฮไลท์ฟุตบอล</h1>
+        <div class="sub-title">จังหวะโดนๆ มันส์ๆ ที่น่าจดจำ</div>
       </div>
     </div>
-    <!-- 💿💿💿💿💿💿💿 -->
-
-
-    <!-- 🖥️🖥️🖥️🖥️🖥️🖥️🖥️ -->
-    <div class="component-menubar">
-      <div class="container">
-        <div class="menu-mobile-toggle">
-          <img src="./images/menubar/toggle-mobile-menu.png" alt="">
-        </div>
-        <div class="contact-container">
-          <div class="text">ติดต่อลงโฆษณา</div>
-          <div class="number">089-999-8899</div>
-        </div>
-        <div class="menu-container">
-          <ul>
-            <li><a href="./index.html" target="_self">หน้าแรก</a></li>
-            <li><a href="./bet-news.html" target="_self" class="active">Bet News</a></li>
-            <li><a href="./score-board.html" target="_self">ตารางคะแนน</a></li>
-            <li><a href="./matches-analyze.html" target="_self">วิเคราะห์บอล</a></li>
-            <li><a href="./guru-prediction.html" target="_self">ทีเด็ดบอล</a></li>
-            <li><a href="./matches-result.html" target="_self">ผลบอล</a></li>
-            <li class="active"><a href="./hilight-video.html" target="_self">ไฮไลท์ฟุตบอล</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- 🖥️🖥️🖥️🖥️🖥️🖥️🖥️ -->
-  </header>
-
-  <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
-  <div class="component-page-header">
-    <div class="container">
-      <h1 class="line-clamp-1">ไฮไลท์ฟุตบอล</h1>
-      <div class="sub-title">จังหวะโดนๆ มันส์ๆ ที่น่าจดจำ</div>
-    </div>
-  </div>
-  <main class="main-layout">
-    <div class="container">
-      <div class="main">
-        <br>
-        <div class="dev-section">
-          <a href="./hilight-video-category.html">Category Page >></a>
-        </div>
-      </div>
-
-    </div>
-  </main>
-  <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
-
-  <footer>
-
-    <div class="logo-footer">
-      <div class="container">
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/premier-league.png" alt="Premier League">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/laliga.png" alt="LaLiga">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/liga.png" alt="Bundes LIGA">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/serie-a.png" alt="Series A">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/ligue-1.png" alt="Ligue 1">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/thai-league.png" alt="Thai League">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/thailand.png" alt="Thailand National Football Team">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/UEFA-champions.png" alt="UEFA Champions League">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/Europa.png" alt="UEFA Europa League">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/EURO.png" alt="UEFA EURO2020">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./images/footer-logo/qatar-2022.png" alt="qatar 2022">
-        </a>
-      </div>
-    </div>
-
-    <div class="main-footer">
+    <main class="main-layout">
       <div class="container">
         <div class="main">
-          <div>
-            <img src="./images/footer-main/footer-main-logo.png" alt="">
+          <br>
+          <div class="dev-section">
+            <a href="./hilight-video-category.html">Category Page >></a>
           </div>
-          <ul>
-            <li><a href="#">หน้าแรก</a></li>
-            <li><a href="#">BET News</a></li>
-            <li><a href="#">แมทช์ พรีวิว</a></li>
-            <li><a href="#">ตารางคะแนน</a></li>
-            <li><a href="#">ทีเด็ดบอล</a></li>
-            <li><a href="#">ผลบอล</a></li>
-            <li><a href="#">ไฮไลท์ฟุตบอล</a></li>
-          </ul>
         </div>
-        <div class="contact">
-          <div class="qr"><img src="./images/footer-main/qrcode.png" alt="@cheerballth"></div>
-          <div class="text">
-            <div class="leading">อัพเดทข่าวก่อนใครได้ที่นี่</div>
-            <div class="lineat">
-              <a href="#">
-                <div><img src="./images/footer-main/line-at.png" alt="@cheerballth"></div>
-                <div>@cheerballth</div>
-              </a>
-            </div>
-          </div>
-          
-        </div>
+
       </div>
-    </div>
-
-    <div class="copy-footer">
-      <div class="container">
-        <div class="copy">
-          © Copyright 2010 www.cheerball.com All Rights Reserved.
-        </div>
-        <div class="social-group">
-          <div class="contact-us">
-            <img src="./images/footer-contact/telelphone.png" alt="Contact Us">
-            <div>
-              <a href="tel:+66899998899">ติดต่อเรา <strong>089-999-8899</strong></a>
-            </div>
-          </div>
-          <div class="social">
-            <a href="#" target="_blank">
-              <img src="./images/footer-contact/facebook.png" alt="Facebook">
-            </a>
-            <a href="#" target="_blank">
-              <img src="./images/footer-contact/twitter.png" alt="Twitter">
-            </a>
-            <a href="#" target="_blank">
-              <img src="./images/footer-contact/youtube.png" alt="Youtube">
-            </a>
-            <a href="#" target="_blank">
-              <img src="./images/footer-contact/instagram.png" alt="Instagram">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </footer>
-
-  <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
-  <script type="text/javascript" src="./js/slick.min.js"></script>
-  <script type="text/javascript" src="./js/clamp.min.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
-</body>
+    </main>
+    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
+    <footer>
+      {{> footer-logo }}
+      {{> footer-main }}
+    </footer>
+    {{> floating-video-container }}
+    {{> script }}
+  </body>
 </html>
