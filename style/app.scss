@@ -96,6 +96,18 @@ body {
   &.no-padding {
     margin-bottom: 4px;
   }
+  &.background-white {
+    background-color: $whtie;
+    padding: 8px 8px;
+    border-radius: 4px;
+    @media screen and (min-width: 768px) {
+      padding: 8px 16px;
+      
+    }
+    img {
+      height: 32px;
+    }
+  }
 }
 
 footer {
@@ -319,8 +331,9 @@ footer {
     right: 0;
     top: 0;
     .content {
+      position: relative;
       margin: 0 auto;
-      background-color: $whtie;
+      background-color: rgba($color: $black, $alpha: 0.5);
       max-width: 800px;
       width: 100%;
       box-sizing: border-box;
@@ -1915,6 +1928,7 @@ section {
 
 .component-page-header {
   margin-top: 32px;
+  margin-bottom: 32px;
   @media screen and (min-width: 768px) { 
     margin-top: 48px;
   }
@@ -1928,5 +1942,38 @@ section {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.6em;
+  }
+}
+
+.layout-feature-list-list {
+  display: grid;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .layoute-list-1,
+  .layoute-list-2 {
+    .component-article-item {
+      margin-bottom: 0;
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    column-gap: 32px;
+    @media screen and (min-width: 992px) {
+      row-gap: 16px;
+    }
+  }
+  .layoute-list-2 {
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: grid;
+    }
   }
 }
