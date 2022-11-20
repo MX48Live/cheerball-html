@@ -226,3 +226,7 @@ if (videoFloating.length > 0) {
     }
   })
 }
+
+$('.component-league-selector').on('click', function () {
+  $(this).toggleClass('open')
+})

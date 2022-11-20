@@ -1,0 +1,124 @@
+.component-league-selector {
+  position: relative;
+  .display {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 16px;
+    @media screen and (min-width: 992px) {
+      margin-top: 24px;
+    }
+  
+    .image {
+      background-color: $white;
+      padding: 8px 8px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      @media screen and (min-width: 992px) {
+        padding: 16px 22px;
+        }
+      img {
+        max-height: 32px;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        @media screen and (min-width: 992px) {
+          max-height: 40px;
+        }
+      }
+    }
+    .name {
+      background-color: $blue;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 8px 8px;
+      @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        padding: 16px 22px;
+      }
+      .name-group {
+        align-items: center;
+        cursor: pointer;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 16px;
+        .text {
+          color: $white;
+          font-size: 16px;
+          font-weight: 700;
+          @media screen and (min-width: 992px) {
+            font-size: 20px;
+          }
+        }
+        .arrow {
+          transition: transform 0.3s;
+          img {
+            height: 24px;
+          }
+        }
+
+      }
+    }
+  }
+  &.open {
+    .dropdown-select {
+      max-height: 1000px;
+    }  
+    .display .arrow {
+      transform: rotate(180deg);
+    } 
+  }
+  .dropdown-select {
+    max-height: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: $white;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: unset;
+      left: 150px;
+    }
+    margin-top: 6px;
+    .item {
+      display: grid;
+      grid-template-columns: 100px auto;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        .name {
+          color: $blue;
+        }
+      }
+    }
+    .image {
+      text-align: center;
+      padding: 8px 16px;
+      height: 32px;
+      display: grid;
+      align-items: center;
+      img {
+        max-height: 32px;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
+    }
+    .name {
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+}

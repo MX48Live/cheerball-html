@@ -65,7 +65,7 @@
           display: block;
           line-height: 1.8em;
           position: relative;
-          color: $whtie;
+          color: $white;
           @media screen and (min-width: 900px) {
             color: $yellow;
           }
@@ -120,7 +120,7 @@
       grid-template-columns: auto;
     }
     .text {
-      color: $whtie;
+      color: $white;
       font-size: 12px;
     }
     .number {
