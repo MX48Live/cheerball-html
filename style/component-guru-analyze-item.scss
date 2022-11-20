@@ -1,0 +1,182 @@
+.component-guru-analyze-item {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: $whtie;
+  margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 992px) {
+    margin-bottom: 2px;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+  }
+  &.item-1 .guru-name .background {
+    background-image: url('/images/guru/desktop-1n.png');
+  }
+  &.item-2 .guru-name .background {
+    background-image: url('/images/guru/desktop-2n.png');
+  }
+  &.item-3 .guru-name .background {
+    background-image: url('/images/guru/desktop-3n.png');
+  }
+  &.item-4 .guru-name .background {
+    background-image: url('/images/guru/desktop-4n.png');
+  }
+  .guru-name {
+    background: linear-gradient(286.74deg, #004277 63.11%, #005091 79.31%, #005091 100%);
+    @media screen and (min-width: 992px) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+    .background {
+      background-image: url('/images/guru/mobile-bg.png');
+      background-size: auto 100%;
+      background-position: right center;
+      background-repeat: no-repeat;
+      color: $whtie;
+      padding: 8px 16px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      @media screen and (min-width: 992px) {
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        text-align: center;
+        
+      }
+      .image {
+        height: 49px;
+        width: 48px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid $yellow;
+        background-color: $yellow;
+        background-size: cover;
+        background-position: center center;
+      }
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+  .stats-group {
+    display: grid;
+    gap: 16px;
+    padding: 16px 8px;
+    @media screen and (min-width: 768px) {
+      padding: 16px;
+    }
+    @media screen and (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    .stats-item {
+      padding: 0 24px;
+      @media screen and (min-width: 768px) {
+        padding: 0;
+      }
+      display: grid;
+      gap: 8px;
+      .item {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 24px 1fr auto;
+        align-items: center;
+        .image {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+        .name {
+          font-size: 12px;
+          color: $black;
+        }
+        .stat {
+          display: grid;
+          gap: 4px;
+          grid-template-columns: auto auto;
+          align-items: center;
+          .number {
+            font-size: 12px;
+            font-weight: 600;
+            color: $black;
+          }
+          .icon {
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            &.check {
+              background-image: url('/images/guru/check.png');
+            }
+            &.xmark {
+              background-image: url('/images/guru/xmark.png');
+            }
+          }
+        }
+      }
+    }
+    .summary-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      gap: 4px;
+      align-content: center;
+      .item {
+        background-color: #F9F9F9;
+        border-radius: 8px;
+        padding: 8px;
+        display: grid;
+        gap: 8px;
+        align-content: center;
+        .title {
+          font-size: 10px;
+          color: #999999;
+        }
+        .number-group {
+          font-size: 12px;
+          font-weight: 600;
+          color: $black;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+          .text {
+            line-height: 1.2em;
+          }
+          .correct {
+            text-align: right;
+            .line {
+              background-color: #3ACE01;
+            }
+          }
+          .incorrect {
+            text-align: left;
+            .line {
+              background-color: #EF4B27;
+            }
+          }
+          .line {
+            height: 2px;
+            max-width: 100%;
+            background-color: #C4C4C4;
+            display: inline-block;
+            width: 0;
+            transition: 2s all;
+            will-change: width;
+          }
+        }
+      }
+    }
+  }
+  &.off {
+    .stats-group .summary-group .item .number-group .line {
+      width: 0% !important;
+    }
+  }
+}

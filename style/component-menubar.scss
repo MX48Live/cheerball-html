@@ -1,0 +1,135 @@
+.component-menubar {
+  background-color: $blue;
+  background-image: url('/images/menubar/menu-bg-right.png');
+  background-position: top right;
+  background-size: auto auto;
+  @media screen and (min-width: 900px) {
+    background-image: url('/images/menubar/menu-bg-left.png'), url('/images/menubar/menu-bg-right.png');
+    background-position: center left, center right;
+    background-size: auto 100%;
+  }
+  background-repeat: no-repeat;
+  .container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    grid-template-areas: "menuMobileToggle contactContainer"
+                         "menuContainer    menuContainer";
+    @media screen and (min-width: 900px) { 
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        grid-template-areas: "menuContainer contactContainer";
+    }
+  }
+  .menu-mobile-toggle {
+    grid-area: menuMobileToggle;
+    padding: 3px;
+    cursor: pointer;
+    img {
+      max-width: 40px;
+    }
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+  .menu-container {
+    grid-area: menuContainer;
+    overflow: hidden;
+    position: relative;
+    ul {
+      padding: 0;
+      max-height: 0px;
+      height: auto;
+      left: 0;
+      right: 0;
+      position: fixed;
+      background-color: $blue;
+      overflow: hidden;
+      transition: 0.3s max-height;
+      z-index: 999;
+      @media screen and (min-width: 900px) { 
+        background-color: transparent;
+        display: block;
+        max-height: unset !important;
+        position: relative;
+      }
+      li {
+        display: block;
+        @media screen and (min-width: 900px) { 
+          display: inline-block;
+        }
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          padding: 14px 10px;
+          display: block;
+          line-height: 1.8em;
+          position: relative;
+          color: $whtie;
+          @media screen and (min-width: 900px) {
+            color: $yellow;
+          }
+          &::after {
+            content: "";
+            height: 2px;
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            background-color: $yellow;
+            left: 0;
+            transition: 0.3s width;
+            @media screen and (min-width: 900px) {
+              height: 5px;
+            }
+          }
+        }
+        &.active, 
+        &:hover {
+          a {
+            color: $yellow;
+          }
+          a::after {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          margin-bottom: 10px;
+          @media screen and (min-width: 900px) {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+    &.open {
+      ul {
+        max-height: 600px;
+      }
+    }
+  }
+  .contact-container {
+    grid-area: contactContainer;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: right;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: auto auto;
+    align-items: center;
+    @media screen and (min-width: 900px) { 
+      grid-template-columns: auto;
+    }
+    .text {
+      color: $whtie;
+      font-size: 12px;
+    }
+    .number {
+      color: $yellow;
+      font-size: 16px;
+      font-weight: 900;
+      @media screen and (min-width: 900px) { 
+        font-size: 18px;
+      }
+    }
+  }
+}

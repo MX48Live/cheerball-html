@@ -1,0 +1,133 @@
+.component-card-video {
+  margin-left: 8px;
+  margin-right: 8px;
+  @media screen and (min-width: 992px) { 
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  background-color: $whtie;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  text-decoration: none;
+  .image {
+    position: relative;
+    cursor: pointer;
+    .thumbnail {
+      width: 100%;
+      display: block;
+      transition: 0.4s all;
+    }
+    .play-btn {
+      position: absolute;
+      z-index: 99;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%),;
+      display: none;
+      transition: 0.3s all;
+      @media screen and (min-width: 768px) { 
+        display: block;
+      }
+    }
+    @keyframes ballRoll {
+      0% {
+        left: 50%;
+        opacity: 1;
+      }
+      55% {
+        left: 100%;
+        opacity: 0;
+      }
+      56% {
+        left: 0%;
+        opacity: 0;
+      }
+      100% {
+        left: 50%;
+        opacity: 1;
+      }
+    }
+    &:hover {
+      .play-btn {
+        animation: ballRoll 0.6s;
+        filter: grayscale(100%);
+      } 
+      .thumbnail {
+        box-shadow: 0px 10px 20px 5px rgba(250,189,88,0.5);
+        -webkit-box-shadow: 0px 10px 20px 5px rgba(250,189,88,0.5);
+        -moz-box-shadow: 0px 10px 20px 5px rgba(250,189,88,0.5);
+      }
+    }
+  }
+  .details {
+    display: none;
+    @media screen and (min-width: 768px) { 
+      display: grid;
+    }
+    padding: 12px;
+    grid-template-columns: 1fr;
+    min-height: 110px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    .title {
+      align-content: flex-start;
+      a {
+        text-decoration: none;
+        &:hover {
+          h3 {
+            color: $yellow;
+          }
+        }
+      }
+      h3 {
+        color: $blue;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3em;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 2;
+        // -webkit-box-orient: vertical;
+      }
+    }
+    .meta {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: auto auto;
+      align-content: flex-end;
+      grid-gap: 8px;
+      .tag {
+        color: $blue;
+        font-weight: 700;
+        font-size: 10px;
+        background-color: $yellow;
+        line-height: 19px;
+        padding: 0 6px;
+        border-radius: 2px;
+        
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .time {
+        font-size: 10px;
+        display: grid;
+        line-height: 19px;
+        align-content: flex-end;
+        color: #C4C4C4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.component-header-readmore {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  &.with-logo {
+    .h2-group {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      gap: 6px;
+      img {
+        height: 33px;
+      }
+    }
+  }
+  h2 {
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 24px;
+    vertical-align: middle;
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
+  }
+  .more {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    color: $blue;
+    line-height: 24px;
+    background-image: url('/images/slick/see-more.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center right -0px;
+    padding-right: 24px;
+    transition: all 0.4s;
+    &:hover {
+      background-position: center right -5px;
+    }
+  }
+  &.no-padding {
+    margin-bottom: 4px;
+  }
+  &.background-white {
+    background-color: $whtie;
+    padding: 8px 8px;
+    border-radius: 4px;
+    @media screen and (min-width: 768px) {
+      padding: 8px 16px;
+      
+    }
+    img {
+      height: 32px;
+    }
+  }
+}
