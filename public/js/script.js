@@ -138,14 +138,6 @@ function calculatePercent(correctNum, incorrectNum) {
   var incorrectPercent = Math.ceil(100 - correctPercent);
   return { correctPercent, incorrectPercent }
 }
-
-const observer = new IntersectionObserver(function (entry) {
-  if (entry[0].isIntersecting) {
-    var i = entry[0].target;
-    i.classList.remove('off')
-  }
-}, { threshold: [1] })
-
 if (guruComponent.length > 0) {
   document.querySelectorAll('.component-guru-analyze-item .summary-group').forEach((group) => {
     group.querySelectorAll('.item').forEach((item) => {
@@ -157,13 +149,13 @@ if (guruComponent.length > 0) {
     })
   })
 }
+
 var guruItemNo = 0;
 document.querySelectorAll('.component-guru-analyze-item').forEach((itemEntry) => {
   itemEntry.classList.add('item-'+ ++guruItemNo)
   if (guruItemNo == 4) {
     guruItemNo = 0
   }
-  observer.observe(itemEntry);
 })
 
 // Video Floating Handle
@@ -187,7 +179,7 @@ videoToggle.addEventListener('click', function () {
   }
  })
     
-console.log(closeVideo)
+
 function loadVideo(data) {
   videoSRC.setAttribute('src', data)
   videoTag.load();
@@ -200,7 +192,7 @@ function destroyVideo() {
 
 if (videoFloating.length > 0) { 
   videoFloating.forEach((item) => {
-    console.log(videoFloatingContainer)
+
     item.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
@@ -230,3 +222,13 @@ if (videoFloating.length > 0) {
 $('.component-league-selector').on('click', function () {
   $(this).toggleClass('open')
 })
+
+
+
+// $("#datepicker").focus();
+var options = $.extend(
+    {},
+    $.datepicker.regional["th"],
+    { dateFormat: "d MM yy" },
+);
+$("#datepicker").datepicker(options).datepicker("setDate",new Date());
