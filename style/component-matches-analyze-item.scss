@@ -23,14 +23,16 @@
   }
   .details {
     padding: 8px;
+    display: grid;
     @media screen and (min-width: 768px) {
       padding: 16px;
     }
     @media screen and (min-width: 992px) {
-      display: grid;
       grid-template-columns: 1fr auto;
     }
     .title-tag-desc {
+      display: grid;
+      align-items: center;
       .title-tag {
         grid-template-columns: auto;
         justify-content: left;
@@ -98,6 +100,25 @@
         display: none;
         @media screen and (min-width: 992px) {
           display: block;
+        }
+      }
+    }
+  }
+  &.compact {
+    .details {
+      gap: 8px;
+       @media screen and (min-width: 768px) {
+        padding: 24px 16px;
+      }
+      .title-tag-desc {
+        .title-tag {
+          margin-bottom: 0;
+          .title {
+            display: grid;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+          }
         }
       }
     }
