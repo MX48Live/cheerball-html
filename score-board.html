@@ -9,15 +9,16 @@
       {{> component-searchbar }}
       {{> component-menubar }}
     </header>
+
+    <div class="container top-push">
+      {{> component-league-selector }}
+    </div>
+
     <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
     <main class="main-sidebar-layout">
       <div class="container">
         <div class="main">
-          
-          <div class="component-page-header">
-            <h1 class="line-clamp-1">Scoreboard</h1>
-          </div>
-
+          {{> component-scoreboard}}
         </div><!-- main -->
 
         <div class="sidebar">
@@ -39,12 +40,6 @@
             {{> sidebar/bet-news}}
           </section>
           <!-- BET News -->
-
-          <!-- Scoreboard -->
-          <section class="no-padding">
-            {{> sidebar/scoreboard}}
-          </section>
-          <!-- Scoreboard -->
 
           <!-- ตารางถ่ายทอดสด -->
           <section class="no-padding">

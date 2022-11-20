@@ -1,0 +1,149 @@
+.component-scoreboard {
+  background-color: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  .section-date {
+    padding: 12px 16px;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    grid-auto-flow: column;
+    gap: 6px;
+    font-weight: 600;
+    span {
+      color: $blue;
+    }
+    @media screen and (min-width: 768px){
+      padding: 24px 16px;
+    }
+  }
+  .scroll-view {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    .scroll-view-container {
+      display: grid;
+      box-sizing: border-box;
+    }
+  }
+  .section-scoreboard-header {
+    font-size: 12px;
+    font-weight: 700;
+    color: $white;
+    background-color: #093051;
+    line-height: 18px;
+    box-sizing: border-box;
+    text-align: center;
+    .team, .form {
+      text-align: left;
+    }
+    .scoreboard-item {
+      div {
+        font-size: 12px;
+      }
+      color: $white;
+      .numbers {
+        color: $white;
+      }
+    }
+  }
+
+  .section-scoreboard-list {
+    .form {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      align-items: center;
+      gap: 2px;
+      > div {
+        background-color: #999999;
+        text-align: center;
+        height: 21px;
+        display: grid;
+        align-content: center;
+      }
+    }
+    .no {
+      color: #999999;
+    }
+    .scoreboard-item {
+      transition: all 0.3s;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .scoreboard-item:hover {
+      background-color: rgba($color: $yellow, $alpha: 0.05);
+    }
+  }
+
+  .scoreboard-item {
+    display: grid;
+    grid-template-columns: 50px 150px 1fr 120px;
+    align-items: center;
+    border-left: 4px solid transparent;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 60px 190px 1fr 120px;
+    }
+    padding: 8px 0px;
+    @media screen and (min-width: 768px){
+      padding: 12px 0px;
+    }
+    div {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .no {
+      text-align: left;
+      padding-left: 14px;
+    }
+    .image {
+      img {
+        width: 24px;
+      }
+    }
+    .name {
+      line-height: 1.4em;
+    }
+    .team {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      align-items: center;
+      gap: 12px;
+      img {
+        width: 24px;
+      }
+    }
+    .numbers {
+      min-width: 400px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      font-size: 14px;
+      font-weight: 700;
+      color: #999999;
+    }
+    text-align: center;
+    .team, .form {
+      text-align: left;
+    }
+    .form {
+      padding-right: 16px;
+      .win {
+        background-color: #62B841;
+      }
+      .draw {
+        background-color: #999999;
+      }
+      .loss {
+        background-color: #C4452A;
+      }
+    }
+    &.hilight {
+      border-left: 4px solid #88BDE8;
+    }
+  }
+}
