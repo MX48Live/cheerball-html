@@ -1,12 +1,22 @@
-import { defineConfig } from "vite"
-import autoprefixer from 'autoprefixer'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  css: {
-    postcss: {
-      plugins: [
-        autoprefixer({}) // add options if needed
-      ],
+  build: {
+    rollupOptions: {
+      input: {
+        article: './article.html',
+        betNewsCategory: './bet-news-category.html',
+        betNews: './bet-news.html',
+        guru: './guru-prediction.html',
+        hilightVideo: './hilight-video.html',
+        hilightVideoCategory: './hilight-video-category.html',
+        hilightVideoArticle: './hilight-video-article.html',
+        index: './index.html',
+        matchAnalyze: './matches-analyze.html',
+        matchResult: './matches-result.html',
+        matchResultDetail: './matches-result-detail.html',
+        scoreBoard: './score-board.html'
+      }
     }
   }
 })
