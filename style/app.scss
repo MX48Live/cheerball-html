@@ -40,14 +40,14 @@ body {
 @import 'component-broadcast';
 @import 'component-matches-analyze-item';
 @import 'component-guru-analyze-item';
-@import 'component-guru-date-selector';
+@import 'component-date-selector';
 @import 'component-article-item';
 @import 'component-league-selector';
 @import 'component-article-detail';
+@import 'component-matches-result';
 @import 'show-more';
 @import 'footer';
 @import 'floating-video-container';
-@import 'ui-datepicker';
 
 .dev-section {
   display: block;
@@ -204,3 +204,14 @@ section {
   }
 }
 
+.sidebar-main-layout {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 373px 1fr;
+      gap: 32px;
+    }
+  }
+}

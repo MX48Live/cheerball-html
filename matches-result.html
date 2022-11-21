@@ -9,7 +9,7 @@
       {{> component-searchbar }}
       {{> component-menubar }}
     </header>
-
+ 
     <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
     <div class="component-page-header">
       <div class="container">
@@ -17,14 +17,17 @@
         <div class="sub-title">รายงานผลบอล และ โปรแกรมบอลวันนี้</div>
       </div>
     </div>
-    <main class="main-layout">
+    <main class="sidebar-main-layout">
       <div class="container">
-        <div class="main">
-          <br>
-          <div class="dev-section">
-            <a href="./matches-result-detail.html">Matches Result Detail >></a>
+        <div class="sidebar">
+          <div class="matches-result-date-selector-group">
+            {{> component-matches-result-date-selector }}
           </div>
         </div>
+        <div class="main">
+          {{> component-matches-result }}
+        </div>
+
       </div>
     </main>
     <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->

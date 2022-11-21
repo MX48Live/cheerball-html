@@ -231,4 +231,19 @@ var options = $.extend(
     $.datepicker.regional["th"],
     { dateFormat: "d MM yy" },
 );
-$("#datepicker").datepicker(options).datepicker("setDate",new Date());
+$("#datepicker").datepicker(options).datepicker("setDate", new Date());
+if($('.datepicker-guru-predict').length > 0) {
+  $('#ui-datepicker-div').addClass('datepicker-guru-predict');
+}
+if($('.datepicker-matches-result').length > 0) {
+  $('.matches-result-date-selector-group').append($('#ui-datepicker-div'))
+  $('#ui-datepicker-div').addClass('datepicker-matches-result');
+}
+$('.ui-datepicker-calendar td').on('click', function () {
+  $('.ui-datepicker-calendar .ui-state-default').removeClass('ui-state-highlight');
+  $('.ui-datepicker-calendar td').removeClass('ui-datepicker-current-day')
+  $('.ui-datepicker-calendar td a').removeClass('ui-state-active')
+  $(this).addClass('ui-datepicker-current-day');
+  $('a', this).addClass('ui-state-active');
+})
+
