@@ -133,11 +133,20 @@ $(document).ready(function () {
 
 // Calculate Match Analyze bar chart animation
 var guruComponent = document.querySelectorAll('.component-guru-analyze-item');
+
 function calculatePercent(correctNum, incorrectNum) {
-  var correctPercent = Math.floor((correctNum * 100) / (correctNum + incorrectNum));
-  var incorrectPercent = Math.ceil(100 - correctPercent);
+  var correctPercent;
+  var incorrectPercent;
+  if (correctNum == 0 && incorrectNum == 0) {
+    correctPercent = 0;
+    incorrectPercent = 0;
+    return { correctPercent, incorrectPercent }
+  }
+  correctPercent = Math.floor((correctNum * 100) / (correctNum + incorrectNum));
+  incorrectPercent = Math.ceil(100 - correctPercent);
   return { correctPercent, incorrectPercent }
 }
+
 if (guruComponent.length > 0) {
   document.querySelectorAll('.component-guru-analyze-item .summary-group').forEach((group) => {
     group.querySelectorAll('.item').forEach((item) => {
@@ -225,7 +234,7 @@ $('.component-league-selector').on('click', function () {
 
 
 
-// $("#datepicker").focus();
+// Date Picker
 var options = $.extend(
     {},
     $.datepicker.regional["th"],
@@ -247,3 +256,34 @@ $('.ui-datepicker-calendar td').on('click', function () {
   $('a', this).addClass('ui-state-active');
 })
 
+// Video Poster Handle
+$('.article-body-section .video-group .poster-group').on('click', function () {
+  $('.article-body-section .video-group').addClass('watching');
+  $('.article-body-section .video-group video')[0].play();
+})
+
+
+// Stats Graph 
+var graphGroup = document.querySelectorAll('.graph-group');
+if (graphGroup.length > 0) {
+  document.querySelectorAll('.graph-group').forEach((group) => {
+    var leftNumber = parseInt(group.querySelector('.left .number').innerText)
+    var rightNumber = parseInt(group.querySelector('.right .number').innerText)
+    var { correctPercent: leftPercent, incorrectPercent: rightPercent } = calculatePercent(leftNumber, rightNumber)
+    group.querySelector('.left .line').style.width = leftPercent + '%';
+    group.querySelector('.right .line').style.width = rightPercent + '%';
+  })
+}
+
+var superGraphGroup = document.querySelectorAll('.super-graph-group');
+if (superGraphGroup.length > 0) {
+  document.querySelectorAll('.super-graph-group').forEach((group) => {
+    var leftNumber = parseInt(group.querySelector('.l-percent').dataset.number)
+    var rightNumber = parseInt(group.querySelector('.r-percent').dataset.number)
+    var { correctPercent: leftPercent, incorrectPercent: rightPercent } = calculatePercent(leftNumber, rightNumber)
+    group.querySelector('.l-percent').getElementsByTagName('span')[0].innerText = leftPercent;
+    group.querySelector('.r-percent').getElementsByTagName('span')[0].innerText = rightPercent;
+    console.log(leftPercent, rightPercent)
+    group.querySelector('.graph-row').style.gridTemplateColumns = `${leftPercent}% ${rightPercent}%`;
+  })
+}
