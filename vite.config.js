@@ -1,9 +1,16 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [autoprefixer],
+    },
+  },
   build: {
+    minify: false,
     rollupOptions: {
       input: {
         article: './article.html',
@@ -18,7 +25,11 @@ export default defineConfig({
         matchResult: './matches-result.html',
         matchResultDetail: './matches-result-detail.html',
         scoreBoard: './score-board.html'
-      }
+      },
+      output: {
+          entryFileNames: 'js/[name].js',
+          assetFileNames: 'style/[name].[ext]',
+      },
     }
   },
   plugins: [
