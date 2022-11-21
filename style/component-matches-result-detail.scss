@@ -1,0 +1,299 @@
+.component-matches-result-detail {
+  background-color: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-left: -16px;
+  margin-right: -16px;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section-matches-detail {
+    padding: 16px 16px;
+    border-bottom: 1px solid #E5E5E5;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+    grid-template-areas:  "logo"
+                          "details"
+                          "meta";
+    @media screen and (min-width: 992px) {
+      gap: 64px;
+      padding: 16px 24px;
+      grid-template-columns: auto auto;
+      grid-template-areas:  "logo    meta"
+                            "details details";
+      justify-content: space-between;
+    }
+    .league-logo {
+      display: grid;
+      grid-area: logo;
+      justify-items: center;
+      align-items: center;
+      img {
+        height: 64px;
+      }
+      @media screen and (min-width: 992px) { 
+        justify-items: flex-start;
+      }
+    }
+    .details {
+      grid-area: details;
+      display: grid;
+      grid-template-columns: 1fr 120px 1fr;
+      @media screen and (min-width: 992px) {
+        grid-template-columns: 1fr 160px 1fr;
+        margin-bottom: 64px;
+      }
+      .left, .right {
+        display: grid;
+        justify-items: center;
+        align-content: flex-start;
+        gap: 8px;
+        @media screen and (min-width: 992px) {
+          gap: 32px;
+        }
+        .text {
+          font-weight: 600;
+          color: $black;
+          line-height: 1.4em;
+          text-align: center;
+          font-size: 12px;
+          @media screen and (min-width: 992px) {
+            font-size: 22px;
+          }
+        }
+      }
+      .mid {
+        display: grid;
+        grid-template-columns: 1fr 8px 1fr;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+          gap: 24px;
+        }
+        .l-number, .r-number {
+          font-weight:  700;
+          color: $black;
+          font-size: 40px;
+          @media screen and (min-width: 992px) {
+            font-size: 56px;
+          }
+        }
+        .l-number {
+          text-align: right;
+        }
+        .sep {
+          font-size: 32px;
+          color: #999999;
+          font-weight: 700;
+        }
+      }
+      .logo {
+        display: grid;
+        justify-content: center;
+        img {
+          width: 48px;
+          @media screen and (min-width: 992px) {
+            width: 64px;
+          }
+        }
+      }
+    }
+    .meta {
+      grid-area: meta;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      box-sizing: border-box;
+      justify-content: space-between;
+      .date-time {
+        font-size: 14px;
+        color: #999999;
+        font-weight: 700;
+      }
+      .button-group {
+        a.button {
+          color: $black;
+          font-weight: 700;
+          font-size: 12px;
+          text-decoration: none;
+          background-color: $yellow;
+          padding: 10px 16px;
+          border-radius: 4px;
+          background-image: url('/images/broadcast/play-btn.png');
+          background-repeat: no-repeat;
+          background-position: center right 3px;
+          background-size: 24px;
+          padding-right: 30px;
+          transition: all 0.3s;
+          display: inline-block;
+          &:hover {
+            background-position: center right 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .scoreboard {
+    .header-section {
+      display: grid;
+      padding: 32px 16px 16px 16px;
+      grid-template-columns: 0px auto 1fr;
+      align-items: center;
+      @media screen and (min-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 32px 16px 24px 16px;
+      }
+      .title {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 600;
+        color: $black;
+        @media screen and (min-width: 992px) {
+          font-size: 22px;
+          text-align: center;
+        }
+      }
+      .team-name {
+        text-align: right;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: flex-end;
+        gap: 8px;
+        align-items: center;
+        .logo {
+          img {
+            height: 24px;
+          }
+        }
+        .name {
+          font-size: 14px;
+          font-weight: 600;
+          color: $black;
+        }
+      }
+    }
+
+    .scoreboard-section {
+      .scoreboard-header {
+        background-color: #093051;
+        color: $white;
+        text-align: center;
+        display: none;
+        align-items: center;
+        @media screen and (min-width: 992px) {
+          display: grid;
+        }
+        .item {
+          .date, .league, .result-group {
+            color: $white;
+          }
+          .result-group {
+            display: grid;
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+      .item {
+        &:nth-child(odd) {
+          background-color: rgba($color: #88BDE8, $alpha: 0.1);
+        }
+        &:nth-child(even) {
+          background-color: $white;
+        }
+        display: grid;
+        gap: 8px;
+        padding: 12px 8px;
+        font-size: 12px;
+        font-weight: 700;
+        grid-template-columns: 1fr;
+        grid-template-areas:  "dategroup"
+                              "result";
+        gap: 16px;
+        @media screen and (min-width: 992px) {
+          gap: 0px;
+          grid-template-columns: 1fr 1.5fr;
+          grid-template-areas:  "dategroup result";
+          text-align: center;
+          font-size: 14px;
+          align-items: center;
+        }
+        .date-group {
+          grid-area: dategroup;
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-areas:  "date league";
+          justify-content: flex-start;
+          gap: 8px;
+          @media screen and (min-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        .date {
+          grid-area: date;
+          font-weight: 400;
+          @media screen and (min-width: 992px) {
+            font-weight: 700;
+          }
+        }
+        .league {
+          grid-area: league;
+        }
+        .date, .league {
+          color: #999999;
+        }
+        .result-group {
+          grid-area: result;
+          color: $black;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 56px 1fr ;
+          .logo {
+            img {
+              height: 24px;
+            }
+          }
+          .name {
+            line-height: 1.4em;
+          }
+          .left {
+            text-align: right;
+            display: grid;
+            grid-template-columns: 1fr 24px;
+            gap: 8px;
+            align-items: center;
+          }
+          .right {
+            text-align: left;
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            gap: 8px;
+            align-items: center;
+          }
+          .mid {
+            display: grid;
+            grid-template-columns: 1fr 4px 1fr;
+            gap: 8px;
+            align-items: center;
+            .l-number {
+              text-align: right;
+            }
+            .sep {
+              text-align: center;
+              color: #999999;
+            }
+            .r-number {
+              text-align: left;
+            }
+          }
+        }
+        // @media screen and (min-width: 992px) {
+        //   grid-template-columns: 0.5fr 0.5fr 1.5fr;
+        // }
+      }
+    }
+  }
+}

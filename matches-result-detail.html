@@ -10,15 +10,15 @@
       {{> component-menubar }}
     </header>
 
-    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
+    <div class="container top-push">
+      {{> breadcrumbs }}
+    </div>
+
     <main class="main-sidebar-layout">
       <div class="container">
         <div class="main">
-          <div class="component-page-header">
-            <h1 class="line-clamp-1">Match Result Detail</h1>
-          </div>
+          {{> component-matches-result-detail }}
         </div>
-
         <div class="sidebar">
 
           <!-- Latest Video -->
@@ -54,7 +54,7 @@
         
       </div>
     </main>
-    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
+
 
     <footer>
       {{> footer-logo }}
