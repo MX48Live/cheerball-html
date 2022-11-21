@@ -10,9 +10,9 @@
       {{> component-menubar }}
     </header>
 
-    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
     <div class="component-page-header">
-      <div class="container">
+      <div class="container"> 
+        {{> breadcrumbs }}
         <h1 class="line-clamp-1">ไฮไลท์ฟุตบอล: Category</h1>
         <div class="sub-title">จังหวะโดนๆ มันส์ๆ ที่น่าจดจำ</div>
       </div>
@@ -20,15 +20,22 @@
     <main class="main-layout">
       <div class="container">
         <div class="main">
-          <br>
-          <div class="dev-section">
-            <a href="./hilight-video-article.html">Article Page >></a>
+          <div class="hilight-video-category-layout">
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
+            {{> component-card-video-full }}
           </div>
         </div>
 
       </div>
     </main>
-    <!-- 👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻👍🏻 -->
 
     <footer>
       {{> footer-logo }}

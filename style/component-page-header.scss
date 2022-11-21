@@ -9,10 +9,17 @@
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 12px;
+    line-height: 1.4em;
   }
   .sub-title {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.6em;
+  }
+  .breadcrumbs {
+    margin-bottom: 24px;
+    @media screen and (min-width: 992px) { 
+      margin-bottom: 32px;
+    }
   }
 }

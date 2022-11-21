@@ -211,3 +211,14 @@
     }
   }
 }
+.component-date-selector-check-text {
+  color: #999999;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 16px;
+  display: none;
+  @media screen and (min-width: 992px) {
+    display: block;
+  }
+}
