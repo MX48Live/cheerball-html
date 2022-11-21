@@ -120,6 +120,14 @@
     @media screen and (min-width: 900px) { 
       grid-template-columns: auto;
     }
+    a {
+      text-decoration: none;
+      &:hover {
+        .text {
+          color: $yellow;
+        }
+      }
+    }
     .text {
       color: $white;
       font-size: 12px;

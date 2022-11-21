@@ -1,0 +1,55 @@
+.contact-us-component {
+  background-color: $blue;
+  background-image: url('/images/contactus/contact-us-bg.png');
+  background-size: cover;
+  background-position: center center;
+  max-width: 778px;
+  border-radius: 12px;
+  margin: 48px auto;
+  padding: 32px 24px;
+  @media screen and (min-width: 768px) {
+    margin: 128px auto;
+    padding: 61px 100px;
+  }
+  .text-group {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h1, .number {
+    color: $yellow;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 8px;
+  }
+  h1 {
+    span {
+      display: block;
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+  }
+  .number {
+    margin-top: 0;
+  }
+  div {
+    font-size: 16px;
+    color: $white;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  a {
+    display: inline-block;
+    color: $blue;
+    text-decoration: none;
+    background-color: $yellow;
+    line-height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+}
