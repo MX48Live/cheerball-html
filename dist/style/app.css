@@ -84,7 +84,7 @@ body {
 }
 
 .component-searchbar .search .search-group input {
-  background-image: url("./images/searchbar/top-search-icon.png");
+  background-image: url("../images/searchbar/top-search-icon.png");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: left center;
@@ -198,7 +198,7 @@ body {
 
 .component-menubar {
   background-color: #005091;
-  background-image: url("./images/menubar/menu-bg-right.png");
+  background-image: url("../images/menubar/menu-bg-right.png");
   background-position: top right;
   background-size: auto auto;
   background-repeat: no-repeat;
@@ -206,7 +206,7 @@ body {
 
 @media screen and (min-width: 900px) {
   .component-menubar {
-    background-image: url("./images/menubar/menu-bg-left.png"), url("./images/menubar/menu-bg-right.png");
+    background-image: url("../images/menubar/menu-bg-left.png"), url("../images/menubar/menu-bg-right.png");
     background-position: center left, center right;
     background-size: auto 100%;
   }
@@ -447,7 +447,7 @@ body {
   font-weight: normal;
   color: #005091;
   line-height: 24px;
-  background-image: url("./images/slick/see-more.png");
+  background-image: url("../images/slick/see-more.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center right 0px;
@@ -1037,7 +1037,7 @@ body {
   width: 24px;
   height: 24px;
   content: "";
-  background-image: url("./images/scoreboard/arrow.png");
+  background-image: url("../images/scoreboard/arrow.png");
   background-size: cover;
   transition: 0.4s all;
 }
@@ -1183,15 +1183,15 @@ body {
 }
 
 .component-sidebar-scoreboard .score-table .score-list .name-status .status.up {
-  background-image: url("./images/scoreboard/up-icon.png");
+  background-image: url("../images/scoreboard/up-icon.png");
 }
 
 .component-sidebar-scoreboard .score-table .score-list .name-status .status.down {
-  background-image: url("./images/scoreboard/down-icon.png");
+  background-image: url("../images/scoreboard/down-icon.png");
 }
 
 .component-sidebar-scoreboard .score-table .score-list .name-status .status.stay {
-  background-image: url("./images/scoreboard/stay-icon.png");
+  background-image: url("../images/scoreboard/stay-icon.png");
 }
 
 .component-sidebar-scoreboard .score-table .score-list .number {
@@ -1359,7 +1359,7 @@ body {
 .component-broadcast .broadcast .league-group .line .play-btn {
   width: 20px;
   height: 20px;
-  background-image: url("./images/broadcast/play-btn.png");
+  background-image: url("../images/broadcast/play-btn.png");
   background-size: 100%;
   background-position: center center;
   background-color: #FABD58;
@@ -1640,19 +1640,19 @@ body {
 }
 
 .component-guru-analyze-item.item-1 .guru-name .background {
-  background-image: url("./images/guru/desktop-1n.png");
+  background-image: url("../images/guru/desktop-1n.png");
 }
 
 .component-guru-analyze-item.item-2 .guru-name .background {
-  background-image: url("./images/guru/desktop-2n.png");
+  background-image: url("../images/guru/desktop-2n.png");
 }
 
 .component-guru-analyze-item.item-3 .guru-name .background {
-  background-image: url("./images/guru/desktop-3n.png");
+  background-image: url("../images/guru/desktop-3n.png");
 }
 
 .component-guru-analyze-item.item-4 .guru-name .background {
-  background-image: url("./images/guru/desktop-4n.png");
+  background-image: url("../images/guru/desktop-4n.png");
 }
 
 .component-guru-analyze-item .guru-name {
@@ -1668,7 +1668,7 @@ body {
 }
 
 .component-guru-analyze-item .guru-name .background {
-  background-image: url("./images/guru/mobile-bg.png");
+  background-image: url("../images/guru/mobile-bg.png");
   background-size: auto 100%;
   background-position: right center;
   background-repeat: no-repeat;
@@ -1774,11 +1774,11 @@ body {
 }
 
 .component-guru-analyze-item .stats-group .stats-item .item .stat .icon.check {
-  background-image: url("./images/guru/check.png");
+  background-image: url("../images/guru/check.png");
 }
 
 .component-guru-analyze-item .stats-group .stats-item .item .stat .icon.xmark {
-  background-image: url("./images/guru/xmark.png");
+  background-image: url("../images/guru/xmark.png");
 }
 
 .component-guru-analyze-item .stats-group .summary-group {
@@ -1892,7 +1892,7 @@ body {
   outline: none;
   cursor: pointer;
   padding-right: 40px;
-  background-image: url("./images/guru/arrow-icon.png");
+  background-image: url("../images/guru/arrow-icon.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right center;
@@ -2022,12 +2022,12 @@ body {
 }
 
 #ui-datepicker-div .ui-datepicker-prev {
-  background-image: url("./images/datepicker/left-icon.png");
+  background-image: url("../images/datepicker/left-icon.png");
   background-size: cover;
 }
 
 #ui-datepicker-div .ui-datepicker-next {
-  background-image: url("./images/datepicker/right-icon.png");
+  background-image: url("../images/datepicker/right-icon.png");
   background-size: cover;
 }
 
@@ -2790,7 +2790,7 @@ body {
 .component-matches-result .league-item .item .right .play-btn {
   width: 20px;
   height: 20px;
-  background-image: url("./images/broadcast/play-btn.png");
+  background-image: url("../images/broadcast/play-btn.png");
   background-size: 100%;
   background-position: center center;
   background-color: #FABD58;
@@ -2806,7 +2806,7 @@ body {
 .component-matches-result .league-item .item .right .data-btn {
   width: 20px;
   height: 20px;
-  background-image: url("./images/broadcast/data-btn.png");
+  background-image: url("../images/broadcast/data-btn.png");
   background-size: 100%;
   background-position: center center;
   border: 1px solid #E5E5E5;
@@ -3005,7 +3005,7 @@ body {
   background-color: #FABD58;
   padding: 10px 16px;
   border-radius: 4px;
-  background-image: url("./images/broadcast/play-btn.png");
+  background-image: url("../images/broadcast/play-btn.png");
   background-repeat: no-repeat;
   background-position: center right 3px;
   background-size: 24px;
@@ -3939,7 +3939,7 @@ footer .copy-footer .social img:hover {
 
 .contact-us-component {
   background-color: #005091;
-  background-image: url("./images/contactus/contact-us-bg.png");
+  background-image: url("../images/contactus/contact-us-bg.png");
   background-size: cover;
   background-position: center center;
   max-width: 778px;
