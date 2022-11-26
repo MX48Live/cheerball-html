@@ -31,8 +31,8 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: `<img src="/images/slick/slick-next.png" class="next" alt="Next" />`,
-    prevArrow: `<img src="/images/slick/slick-prev.png" class="prev" alt="Next" />`,
+    nextArrow: `<img src="./images/slick/slick-next.png" class="next" alt="Next" />`,
+    prevArrow: `<img src="./images/slick/slick-prev.png" class="prev" alt="Next" />`,
     mobileFirst: true,
     variableWidth: true,
     arrows: true,
@@ -62,8 +62,8 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: `<img src="/images/slick/slick-next.png" class="next" alt="Next" />`,
-    prevArrow: `<img src="/images/slick/slick-prev.png" class="prev" alt="Next" />`,
+    nextArrow: `<img src="./images/slick/slick-next.png" class="next" alt="Next" />`,
+    prevArrow: `<img src="./images/slick/slick-prev.png" class="prev" alt="Next" />`,
     mobileFirst: true,
     variableWidth: true,
     arrows: true,
@@ -122,8 +122,8 @@ $(document).ready(function () {
   $('.broadcast-carousel-container .carousel-header').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: `<img src="/images/slick/slick-next.png" class="next" alt="Next" />`,
-    prevArrow: `<img src="/images/slick/slick-prev.png" class="prev" alt="Next" />`,
+    nextArrow: `<img src="./images/slick/slick-next.png" class="next" alt="Next" />`,
+    prevArrow: `<img src="./images/slick/slick-prev.png" class="prev" alt="Next" />`,
   });
   $('.broadcast-carousel-container .carousel-header .nav').on('click', function () {
     $('.broadcast-carousel-container .carousel-header .nav').removeClass('active');

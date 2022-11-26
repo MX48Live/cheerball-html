@@ -24,7 +24,8 @@ export default defineConfig({
         matchAnalyze: './matches-analyze.html',
         matchResult: './matches-result.html',
         matchResultDetail: './matches-result-detail.html',
-        scoreBoard: './score-board.html'
+        scoreBoard: './score-board.html',
+        contactUs: './contact-us.html'
       },
       output: {
           entryFileNames: 'js/[name].js',

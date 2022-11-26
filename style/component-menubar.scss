@@ -1,10 +1,10 @@
 .component-menubar {
   background-color: $blue;
-  background-image: url('/images/menubar/menu-bg-right.png');
+  background-image: url('../images/menubar/menu-bg-right.png');
   background-position: top right;
   background-size: auto auto;
   @media screen and (min-width: 900px) {
-    background-image: url('/images/menubar/menu-bg-left.png'), url('/images/menubar/menu-bg-right.png');
+    background-image: url('../images/menubar/menu-bg-left.png'), url('../images/menubar/menu-bg-right.png');
     background-position: center left, center right;
     background-size: auto 100%;
   }

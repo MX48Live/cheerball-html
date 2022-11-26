@@ -59,7 +59,7 @@
         width: 24px;
         height: 24px;
         content: "";
-        background-image: url('/images/scoreboard/arrow.png');
+        background-image: url('../images/scoreboard/arrow.png');
         background-size: cover;
         transition: 0.4s all;
       }
@@ -196,13 +196,13 @@
           background-repeat: no-repeat;
           opacity: 1;
           &.up {
-            background-image: url('/images/scoreboard/up-icon.png');
+            background-image: url('../images/scoreboard/up-icon.png');
           }
           &.down {
-            background-image: url('/images/scoreboard/down-icon.png');
+            background-image: url('../images/scoreboard/down-icon.png');
           }
           &.stay {
-            background-image: url('/images/scoreboard/stay-icon.png');
+            background-image: url('../images/scoreboard/stay-icon.png');
           }
         }
       }

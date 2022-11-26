@@ -41,7 +41,7 @@
     @media screen and (min-width: 992px) {
       font-size: 20px;
     }
-    background-image: url('/images/guru/arrow-icon.png');
+    background-image: url('../images/guru/arrow-icon.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: right center;
@@ -139,11 +139,11 @@
     }
   }
   .ui-datepicker-prev {
-    background-image: url('/images/datepicker/left-icon.png');
+    background-image: url('../images/datepicker/left-icon.png');
     background-size: cover;
   }
   .ui-datepicker-next {
-    background-image: url('/images/datepicker/right-icon.png');
+    background-image: url('../images/datepicker/right-icon.png');
     background-size: cover;
   }
   .ui-datepicker-header {
